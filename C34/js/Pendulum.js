@@ -7,7 +7,7 @@ class Pendulum {
       slop: 1,
       inertia: Infinity
     };
-    this.body = Bodies.rectangle(x, y, 40, 40, options);
+    this.body = Bodies.circle(x, y, 30, options);
     this.x = x;
     this.y = y;
     this.color = color;
@@ -20,8 +20,9 @@ class Pendulum {
     translate(pos.x, pos.y);
     rotate(angle);
     noStroke();
+    rectMode(CENTER)
     fill(this.color);
-    ellipse(0, 0, 60, 60);
+    ellipse(0, 0, 60);
     pop();
   }
 }
